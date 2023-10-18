@@ -13,28 +13,58 @@ public class Motor {
     String tipeBaterai;
     int masaMaintenance;
     String[] merk;
-    private int jmlMerk = 0;
+    
+    // Cara 1
+//    private int jmlMerk = 0;
 
     // Constructor
-    Motor(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String merk) {
+//    public Motor(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String merk) {
+//        this.tipeTransmisi = tipeTransmisi;
+//        this.tipeBaterai = tipeBaterai;
+//        this.masaMaintenance = masaMaintenance;
+//        this.merk = new String[10]; // Inisialisasi array merk dengan panjang 10
+//        this.merk[jmlMerk] = merk;
+//        this.jmlMerk++;
+//    }
+
+    // Method
+//    public void tampilkanSpek() {
+//        System.out.println("Tipe Transmisi : " + tipeTransmisi);
+//        System.out.println("Tipe Baterai : " + tipeBaterai);
+//        System.out.println("Masa Maintenance : " + masaMaintenance + " bulan");
+//        System.out.print("Merk : \n");
+//        for (int i = 0; i< jmlMerk; i++) {
+//        System.out.println(merk[i] + " ");
+//            }
+//        
+//        System.out.println();
+//
+//        }
+    
+    // Cara 2
+    public Motor(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String[] merk) {
         this.tipeTransmisi = tipeTransmisi;
         this.tipeBaterai = tipeBaterai;
         this.masaMaintenance = masaMaintenance;
-        this.merk = new String[10]; // Inisialisasi array merk dengan panjang 10
-        this.merk[jmlMerk] = merk;
-        this.jmlMerk++;
+        this.merk = merk;
     }
+
 
     // Method
     void tampilkanSpek() {
+        for(int i = 0; i < merk.length;i++)
+        {
+            
         System.out.println("Tipe Transmisi : " + tipeTransmisi);
         System.out.println("Tipe Baterai : " + tipeBaterai);
         System.out.println("Masa Maintenance : " + masaMaintenance + " bulan");
-        System.out.println("Merk : ");
-
-        for (int i = 0; i< jmlMerk; i++) {
-        System.out.println(merk[i] + " ");
-            }
+        System.out.print("Merk : " + merk[i]);        
+        
+        System.out.println();
+        System.out.println();
         }
+        
+        System.out.println("============================");
     }
+}
 

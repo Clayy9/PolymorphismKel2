@@ -10,8 +10,16 @@ package com.mycompany.tugas2kel2;
  */
 public class Matic extends Motor {
     
+    // Cara 1
     // Subclass Constructor
-    Matic(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String merk)
+//    Matic(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String merk)
+//    {
+//        super(tipeTransmisi, tipeBaterai, masaMaintenance, merk);
+//    }
+    
+    // Cara 2
+    // Subclass Constructor
+    Matic(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String[] merk)
     {
         super(tipeTransmisi, tipeBaterai, masaMaintenance, merk);
     }
@@ -20,7 +28,7 @@ public class Matic extends Motor {
     void tampilkanSpek()
     {
         super.tampilkanSpek();
-        System.out.print("Jenis Motor: Matic");
+        System.out.print("Jenis Motor: Matic \n");
     }
     
 }

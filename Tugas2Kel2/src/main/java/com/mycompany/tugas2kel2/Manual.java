@@ -10,8 +10,16 @@ package com.mycompany.tugas2kel2;
  */
 public class Manual extends Motor{
     
+    // Cara 1
     // Subclass Constructor
-    Manual(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String merk)
+//    Manual(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String merk)
+//    {
+//        super(tipeTransmisi, tipeBaterai, masaMaintenance, merk);
+//    }
+    
+    // Cara 2
+    // Subclass Constructor
+    Manual(String tipeTransmisi, String tipeBaterai, int masaMaintenance, String[] merk)
     {
         super(tipeTransmisi, tipeBaterai, masaMaintenance, merk);
     }
@@ -20,6 +28,6 @@ public class Manual extends Motor{
     void tampilkanSpek()
     {
         super.tampilkanSpek();
-        System.out.print("Jenis Motor: Manual");
+        System.out.print("Jenis Motor: Manual \n");
     }
 }
